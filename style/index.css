@@ -198,10 +198,12 @@ header nav a {
 .bottom-content {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .bottom-content .text-container {
     padding: 0 2%;
+    width: 33%;
 }
 
 /* Footer styles */
@@ -254,7 +256,7 @@ footer nav a {
     /* Container styles*/
 
     .container {
-        width: 80%;
+        width: 100%;
     }
 
     /* Header styles */
@@ -276,6 +278,7 @@ footer nav a {
 
     .top-content, .middle-content, .bottom-content {
         padding: 5% 0;
+        margin: 0 5%;
     }
 
     /* Middle-content styles*/
@@ -286,11 +289,11 @@ footer nav a {
 
     /* Bottom-content styles*/
 
-    .bottom-content {
-        flex-direction: column;
+    .bottom-content .text-container {
+        width: 50%;
     }
 
-    .bottom-content .text-container, footer {
+    .bottom-content .text-container {
         margin: 5% 0;
     }
 
@@ -300,22 +303,10 @@ footer nav a {
         width: 100%;
         justify-content: space-around;
     }
-    
+
 }
 
 @media (max-width: 500px) {
-
-    /* Container styles*/
-
-    .container {
-        width: 90%;
-    }
-
-    /* Middle-content styles*/
-
-    .middle-content .boxes .box {
-        width: 100%;
-    }
 
     /* Header styles*/
 
@@ -334,6 +325,18 @@ footer nav a {
     header nav a:hover {
         background:crimson;
         color: white;
+    }
+
+    /* Middle-content styles*/
+
+    .middle-content .boxes .box {
+        width: 100%;
+    }
+
+    /* Bottom-content styles */
+
+    .bottom-content .text-container {
+        width: 100%;
     }
 
     /* Footer styles*/
