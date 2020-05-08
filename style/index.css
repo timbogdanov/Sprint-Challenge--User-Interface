@@ -51,42 +51,93 @@ table {
     box-sizing: border-box;
 }
 
+/* Over-ride font-size to equal 10px */
+
+html {
+    font-size: 62.5%;
+}
+
+/* General styles */
+
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
 }
 
 p {
     line-height: 1.4;
+    font-size: 1.4rem;
+}
+
+a {
+    font-size: 1.6rem;
 }
 
 .container {
-    width: 800px;
+    width: 60%;
     margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 4% 0;;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 2%;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    padding: 2%;
+    border-radius: 8px;
+}
+
+header nav a:hover {
+    background:crimson;
+    color: white;
+}
+
+.jumbotron img {
+    width: 100%;
+}
+
+/* Top-content styles */
+
+.top-content, .middle-content, .bottom-content {
+    padding: 3% 0;
 }
 
 .top-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     border-bottom: 1px dashed black;
 }
 
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 5%;  
 }
 
+/* Middle-content styles */
+
 .middle-content {
-    margin-bottom: 20px;
     border-bottom: 1px dashed black;
 }
 
@@ -98,23 +149,65 @@ p {
 .middle-content .boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
     background: black;
-    margin: 20px 2.5%;
+    margin: 2% 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.middle-content .boxes .box:first-child {
+    background: teal;
+}
+
+.middle-content .boxes .box:nth-child(2) {
+    background: gold;
+}
+
+.middle-content .boxes .box:nth-child(3) {
+    background: cadetblue;
+}
+
+.middle-content .boxes .box:nth-child(4) {
+    background: coral;
+}
+
+.middle-content .boxes .box:nth-child(5) {
+    background: crimson;
+}
+
+.middle-content .boxes .box:nth-child(6) {
+    background: forestgreen;
+}
+
+.middle-content .boxes .box:nth-child(7) {
+    background: darkorchid;
+}
+
+.middle-content .boxes .box:nth-child(8) {
+    background: hotpink;
+}
+
+.middle-content .boxes .box:nth-child(9) {
+    background: indigo;
+}
+
+.middle-content .boxes .box:nth-child(10) {
+    background: dodgerblue;
+}
+
+/* Bottom-content styles */
+
 .bottom-content {
     display: flex;
-    margin: 0 2% 20px;
+    margin: 0 2% 3%;
     justify-content: space-around;
 }
 
@@ -126,6 +219,8 @@ p {
     padding-right: 0;
 }
 
+/* Footer styles */
+
 footer {
     width: 100%;
     background: black;
@@ -136,11 +231,85 @@ footer nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
+    padding: 2%;
+    font-size: 1.8rem;
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/* Media queries */
+
+@media (max-width: 800px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .top-content .text-container {
+        width: 100%;
+        padding: 0px 1% 5%;
+    }
+
+    .top-content, .middle-content, .bottom-content {
+        padding: 5% 0;
+    }
+
+    .middle-content .boxes .box {
+        width: 45%;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header nav {
+        margin: 5% 0 0 0;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+    }
+
+    .bottom-content .text-container, footer {
+        margin: 5% 0;
+    }
+
+    footer nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .middle-content .boxes .box {
+        width: 100%;
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav a {
+        margin: 0 ;
+        text-align: center;
+        width: 100%;
+        padding: 4% 0%;
+    }
+
+    footer nav {
+        flex-direction: column;
+    }
+
+    footer nav a {
+        padding: 4% 0;
+    }
+
 }
