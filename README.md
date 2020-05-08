@@ -38,12 +38,19 @@ Edit this document to include your answers after each question. Make sure to lea
 
     - Semantic HTML could be defined as elements on a page that bring meaning to you code. For example if you wanted to create a navigation in you header you would do:
 
+
     ```
         <header>
-            <nav></nav>
+            This will tell any developer that this is a header.
+            <nav>This will tell any developer that a navigation goes here</nav>
         </header>
     ```
 
+    ```
+        <footer>
+            This will tell any developer working on your code that this part of the code is a footer.
+        </footer>
+    ```
 
 2. What are the 4 areas of the box model?
 
@@ -58,7 +65,9 @@ Edit this document to include your answers after each question. Make sure to lea
 
     - Git is valuable to a team of developers because it bring the ability to version you implementations in an organized way. If you ever need to go back and revert to an old copy on your code, with git you're able to do that.
 
-    - Git also allows team work together and submit their changes into one repository.
+    - Git also allows teams work together and submit their changes into one repository.
+
+    - Git is efficient and convenient.
 
 
 5. Define mobile-first design in your own words.
