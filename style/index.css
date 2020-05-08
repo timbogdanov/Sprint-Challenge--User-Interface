@@ -89,12 +89,16 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    margin: 4% 0;;
+    margin: 4% 0;
+}
+
+header .logo {
+    justify-content: flex-start;
 }
 
 header nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     margin-left: 2%;
 }
@@ -102,13 +106,6 @@ header nav {
 header nav a {
     text-decoration: none;
     color: black;
-    padding: 2%;
-    border-radius: 8px;
-}
-
-header nav a:hover {
-    background:crimson;
-    color: white;
 }
 
 .jumbotron img {
@@ -240,6 +237,29 @@ footer nav a {
     text-decoration: none;
 }
 
+/* Contact styles */
+
+.form {
+    margin: 5% 0 10% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2%;
+    row-gap: 15%;
+}
+
+.form input, .form textarea, button {
+    padding: 3% 5%;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.form button {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
 /* Media queries */
 
 @media (max-width: 800px) {
@@ -302,6 +322,12 @@ footer nav a {
         text-align: center;
         width: 100%;
         padding: 4% 0%;
+        transition: all .3s ease;
+    }
+
+    header nav a:hover {
+        background:crimson;
+        color: white;
     }
 
     footer nav {
