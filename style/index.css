@@ -262,11 +262,7 @@ footer nav a {
     /* Header styles */
 
     header {
-        flex-direction: column;
-    }
-
-    header nav {
-        margin: 5% 0 0 0;
+        margin: 5%;
     }
 
     /* Top-content styles*/
@@ -310,8 +306,13 @@ footer nav a {
 
     /* Header styles*/
 
+    header {
+        flex-direction: column;
+    }
+
     header nav {
         flex-direction: column;
+        margin-top: 5%;
     }
 
     header nav a {
